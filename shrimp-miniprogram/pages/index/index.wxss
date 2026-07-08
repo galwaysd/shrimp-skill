@@ -1,0 +1,129 @@
+/* 启动页样式 */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 32rpx;
+  justify-content: space-between;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80rpx;
+}
+
+/* Logo 区域 */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64rpx;
+}
+
+.logo-emoji {
+  font-size: 120rpx;
+  margin-bottom: 16rpx;
+}
+
+.logo-title {
+  font-size: 64rpx;
+  font-weight: 700;
+  color: #2D2D2D;
+  margin-bottom: 24rpx;
+}
+
+.logo-subtitle {
+  font-size: 30rpx;
+  color: #8C8C8C;
+  line-height: 1.6;
+}
+
+/* 人格卡片 */
+.personality-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-bottom: 48rpx;
+}
+
+.p-card {
+  border-radius: 28rpx;
+  padding: 28rpx;
+}
+
+.p-card-white {
+  background: #FFFFFF;
+  border: 2rpx solid #E8E2DA;
+}
+
+.p-card-black {
+  background: #2D2D2D;
+  border: 2rpx solid #2D2D2D;
+}
+
+.p-card-black .p-name,
+.p-card-black .p-desc,
+.p-card-black .p-tag {
+  color: #F5F0EB;
+}
+
+.p-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.p-emoji {
+  font-size: 40rpx;
+}
+
+.p-name {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #2D2D2D;
+}
+
+.p-desc {
+  display: block;
+  font-size: 28rpx;
+  color: #2D2D2D;
+  margin-bottom: 8rpx;
+}
+
+.p-tag {
+  display: block;
+  font-size: 24rpx;
+  color: #8C8C8C;
+}
+
+/* 安全提示 */
+.safety-note {
+  background: rgba(141, 110, 99, 0.08);
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 32rpx;
+}
+
+.safety-text {
+  font-size: 22rpx;
+  color: #8C8C8C;
+  line-height: 1.6;
+}
+
+/* 底部 */
+.footer {
+  padding: 32rpx 0 48rpx 0;
+}
+
+.footer-note {
+  display: block;
+  text-align: center;
+  font-size: 22rpx;
+  color: #B8B8B8;
+  margin-top: 20rpx;
+}

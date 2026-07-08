@@ -1,0 +1,72 @@
+<!-- 聊天页 -->
+<view class="chat-container">
+  <!-- 顶部导航 -->
+  <view class="chat-header">
+    <view class="header-left">
+      <text class="header-emoji">🦐</text>
+      <view class="header-info">
+        <text class="header-name">虾仔</text>
+        <text class="header-mode {{currentMode === 'blackShrimp' ? 'mode-black' : 'mode-white'}}">
+          {{currentMode === 'blackShrimp' ? '黑虾模式' : '白虾模式'}}
+        </text>
+      </view>
+    </view>
+    <view class="header-right">
+      <view class="switch-btn {{currentMode === 'blackShrimp' ? 'switch-active' : ''}}" bindtap="toggleMode">
+        <text class="switch-label">{{currentMode === 'blackShrimp' ? '切白虾' : '切黑虾'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 消息列表 -->
+  <scroll-view class="message-list" scroll-y="true" scroll-with-animation="true" 
+    scroll-into-view="{{scrollToId}}" bindscrolltolower="onScrollToTop">
+    <view class="welcome-card" wx:if="{{messages.length === 0}}">
+      <text class="welcome-title">我是虾仔</text>
+      <text class="welcome-desc">一个该温柔时温柔、该犀利时犀利的朋友。</text>
+      <text class="welcome-hint">你可以跟我聊任何事，不用客气。</text>
+    </view>
+
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="message-row {{item.role === 'user' ? 'row-user' : 'row-assistant'}}" id="msg-{{item.id}}">
+        <view class="avatar {{item.role === 'user' ? 'avatar-user' : 'avatar-shrimp'}}">
+          <text>{{item.role === 'user' ? '我' : '🦐'}}</text>
+        </view>
+        <view class="bubble {{item.role === 'user' ? 'bubble-user' : 'bubble-assistant'}}">
+          <text class="bubble-text">{{item.content}}</text>
+          <view class="bubble-time">{{item.time}}</view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 加载中 -->
+    <view class="message-row row-assistant" wx:if="{{isLoading}}">
+      <view class="avatar avatar-shrimp">
+        <text>🦐</text>
+      </view>
+      <view class="bubble bubble-assistant bubble-loading">
+        <view class="loading-dots">
+          <view class="dot"></view>
+          <view class="dot"></view>
+          <view class="dot"></view>
+        </view>
+      </view>
+    </view>
+
+    <view id="scroll-bottom"></view>
+  </scroll-view>
+
+  <!-- 底部输入区 -->
+  <view class="input-area">
+    <view class="input-wrapper">
+      <input class="text-input" type="text" placeholder="和虾仔说点什么..." 
+        value="{{inputValue}}" bindinput="onInput" bindconfirm="sendMessage" 
+        confirm-type="send" maxlength="500" />
+      <button class="send-btn {{inputValue.trim() ? 'send-active' : ''}}" 
+        disabled="{{!inputValue.trim() || isLoading}}" bindtap="sendMessage">
+        <text>发送</text>
+      </button>
+    </view>
+    <text class="input-hint">发送即表示你同意 <text class="link">服务条款</text></text>
+  </view>
+</view>
