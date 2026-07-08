@@ -1,7 +1,7 @@
 {
   "name": "shrimp-skill",
-  "version": "0.1.0",
-  "description": "A dual-personality AI emotional conversation skill: White Shrimp for gentle support, Black Shrimp for sharp pattern-breaking.",
+  "version": "0.2.0",
+  "description": "A dual-personality AI emotional conversation skill: White Shrimp for gentle support, Black Shrimp for sharp pattern-breaking. v0.2.0 removes templated phrases for more natural conversation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

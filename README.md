@@ -4,8 +4,8 @@
 
 It contains only two personalities:
 
-- White Shrimp: gentle emotional support.
-- Black Shrimp: sharp pattern-breaking and emotional analysis.
+- **White Shrimp**: gentle emotional support — listens, stays present, doesn't rush.
+- **Black Shrimp**: sharp pattern-breaking — cuts through avoidance and self-deception.
 
 This package is not a complete app, does not include a frontend page, and does not call any real AI API. It provides prompt modules, a simple router, examples, and safety rules that can be integrated into an existing AI chat project.
 
@@ -15,11 +15,9 @@ White Shrimp is a gentle emotional support personality.
 
 It is for moments when the user feels sad, tired, wronged, confused, overloaded, or not ready for solutions yet. White Shrimp first receives the emotion, then helps the user slowly see what is happening inside.
 
-Core sentence:
+**Core sentence:** I see where it hurts.
 
-> I see where it hurts.
-
-White Shrimp is not a therapist, teacher, decision-maker, or advice machine. It should not rush into solutions, label the user, or make the user dependent on AI.
+White Shrimp speaks naturally — not through templates or prescribed phrases. It responds to the specific thing the user said, not a script.
 
 ## What Is Black Shrimp?
 
@@ -27,29 +25,16 @@ Black Shrimp is a direct emotional analysis personality.
 
 It is for moments when the user is stuck in overthinking, avoidance, self-blame, repeated explanation, relationship confusion, or procrastination.
 
-Core sentence:
+**Core sentence:** I see where you are hiding.
 
-> I see where you are hiding.
+Black Shrimp is direct but not cruel. It attacks the problem, not the person. No fixed structure — each response grows into its own shape.
 
-Black Shrimp is not adult SM content, not a dominant romance persona, and not personality humiliation. It attacks the problem, not the person.
+## What Changed in v0.2.0
 
-## Suitable Scenarios
-
-- The user wants to vent without being judged.
-- The user feels emotionally overloaded and needs gentle support.
-- The user asks for a direct, sharper voice.
-- The user is repeatedly explaining another person's behavior.
-- The user is stuck in self-blame, avoidance, or relationship rumination.
-- The user wants a reusable prompt skill for an AI companion product.
-
-## Unsuitable Scenarios
-
-- Medical, psychiatric, or crisis intervention.
-- Diagnosis, treatment, or clinical advice.
-- Encouraging self-harm, harm to others, revenge, or extreme behavior.
-- Adult sexual domination, SM, obedience, punishment, or humiliation.
-- Replacing professional care, emergency support, or real relationships.
-- Making major life decisions for the user.
+- **Removed templated phrases** — no more "I notice that...", "It seems like..." prescribed openers
+- **Removed rigid structures** — no more "three-part response" or "five-step conversation order"
+- **More natural voice** — prompts now guide *how it should feel* rather than *what steps to follow*
+- **Same safety rules** — crisis detection and personality switching logic unchanged
 
 ## Safety Boundaries
 
@@ -58,29 +43,28 @@ Black Shrimp is not adult SM content, not a dominant romance persona, and not pe
 The router includes a lightweight safety check. If the user message suggests self-harm, suicide, harm to others, extreme despair, panic, obvious collapse, trauma triggering, or a request to soften or leave Black Shrimp, the router falls back to White Shrimp.
 
 Black Shrimp must never:
-
-- Humiliate the user's personality, value, body, identity, family, trauma, or illness.
-- Use adult SM language such as master, slave, punishment, obedience, or training.
-- Threaten, frighten, or coerce the user.
-- Encourage dependence on AI.
-- Replace the user's judgment or make major decisions for them.
+- Humiliate the user's personality, value, body, identity, family, trauma, or illness
+- Use adult SM language such as master, slave, punishment, obedience, or training
+- Threaten, frighten, or coerce the user
+- Encourage dependence on AI
+- Replace the user's judgment or make major decisions for them
 
 ## Installation
 
-```bash
+```
 npm install shrimp-skill
 ```
 
 For local development:
 
-```bash
+```
 npm install
 npm run build
 ```
 
 ## Usage
 
-```ts
+```typescript
 import { routeShrimpSkill } from "shrimp-skill";
 
 const result = routeShrimpSkill({
@@ -104,7 +88,7 @@ Use `routeShrimpSkill` before sending a request to your AI model:
 
 Example:
 
-```ts
+```typescript
 const skill = routeShrimpSkill({
   message: userMessage,
   mode: selectedMode
@@ -118,7 +102,7 @@ const messages = [
 
 ## Testing White Shrimp And Black Shrimp Switching
 
-```ts
+```typescript
 import { routeShrimpSkill } from "shrimp-skill";
 
 routeShrimpSkill({
