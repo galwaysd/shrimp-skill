@@ -1,0 +1,104 @@
+.history-container {
+  padding: 32rpx;
+  padding-top: calc(120rpx + env(safe-area-inset-top));
+  min-height: 100vh;
+  background: #F5F0EB;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+
+.history-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #2D2D2D;
+}
+
+.history-clear {
+  font-size: 26rpx;
+  color: #B8B8B8;
+}
+
+.history-clear:active {
+  color: #E57373;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120rpx 0;
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  margin-bottom: 24rpx;
+}
+
+.empty-text {
+  font-size: 30rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.empty-hint {
+  font-size: 26rpx;
+  color: #B8B8B8;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  padding: 28rpx 32rpx;
+  border-radius: 20rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+
+.session-item:active {
+  opacity: 0.8;
+}
+
+.session-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-preview {
+  display: block;
+  font-size: 28rpx;
+  color: #2D2D2D;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 8rpx;
+}
+
+.session-time {
+  font-size: 22rpx;
+  color: #B8B8B8;
+}
+
+.session-mode {
+  flex-shrink: 0;
+  font-size: 22rpx;
+  padding: 6rpx 20rpx;
+  border-radius: 12rpx;
+  margin-left: 16rpx;
+}
+
+.mode-white {
+  background: rgba(141, 110, 99, 0.12);
+  color: #8D6E63;
+}
+
+.mode-black {
+  background: #2D2D2D;
+  color: #F5F0EB;
+}

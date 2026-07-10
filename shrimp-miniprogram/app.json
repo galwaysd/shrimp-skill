@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/history/history"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F5F0EB",
+    "navigationBarTitleText": "虾仔",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F0EB",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

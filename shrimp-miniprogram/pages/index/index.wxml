@@ -1,0 +1,42 @@
+<!-- 启动页 -->
+<view class="page-container">
+  <view class="hero">
+    <view class="logo-area">
+      <text class="logo-emoji">🦐</text>
+      <text class="logo-title">虾仔</text>
+      <text class="logo-subtitle">一个该温柔时温柔</text>
+      <text class="logo-subtitle">该犀利时犀利的朋友</text>
+    </view>
+
+    <view class="personality-cards">
+      <view class="p-card p-card-white">
+        <view class="p-card-header">
+          <text class="p-emoji">🦐</text>
+          <text class="p-name">白虾</text>
+        </view>
+        <text class="p-desc">温柔接住你的情绪</text>
+        <text class="p-tag">累了 委屈 迷茫 需要有人说说话</text>
+      </view>
+
+      <view class="p-card p-card-black">
+        <view class="p-card-header">
+          <text class="p-emoji">🦐</text>
+          <text class="p-name">黑虾</text>
+        </view>
+        <text class="p-desc">犀利点醒你的逃避</text>
+        <text class="p-tag">内耗 纠结 反复想同一件事 需要被点醒</text>
+      </view>
+    </view>
+
+    <view class="safety-note">
+      <text class="safety-text">虾仔不是治疗师，不做诊断和治疗。如果你正处于危机中，请寻求专业帮助。</text>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="btn-primary" bindtap="startChat">
+      开始和虾仔聊天
+    </button>
+    <text class="footer-note">第一次会话免费 · 后续按次计费</text>
+  </view>
+</view>
